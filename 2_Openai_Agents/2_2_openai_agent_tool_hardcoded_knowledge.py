@@ -9,11 +9,11 @@ load_dotenv(override=True)
 client = OpenAI()
 
 knowledge_base = {
-    "shipping_time": "Our standard shipping time is 3-5 business days.",
-    "return_policy": "You can return any product within 30 days of delivery.",
+    "shipping time": "Our standard shipping time is 3-5 business days.",
+    "return policy": "You can return any product within 30 days of delivery.",
     "warranty": "All products come with a one-year warranty covering manufacturing defects.",
-    "payment_methods": "We accept credit cards, debit cards, and PayPal.",
-    "customer_support": "You can reach our support team 24/7 via email or chat."
+    "payment methods": "We accept credit cards, debit cards, and PayPal.",
+    "customer support": "You can reach our support team 24/7 via email or chat."
 }
 
 @function_tool
@@ -33,8 +33,10 @@ async def faq_invoker(topic: str) -> str:
 faq_agent = Agent(
     name="Customer Support Bot",
     instructions=(
-        "You are a helpful customer support assistant. "
-        "Answer questions using your FAQ tool when appropriate."
+        "You are a customer support assistant. "
+        "You MUST ALWAYS use the faq_invoker tool to answer questions. "
+        "DO NOT answer from your own knowledge. "
+        "Use the tool even if you think you know the answer."
     ),
     tools=[faq_invoker]
 )
