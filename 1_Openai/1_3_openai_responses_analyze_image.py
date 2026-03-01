@@ -10,7 +10,7 @@ client = OpenAI(
     )
 
 file = client.files.create(
-    file=open("animals.pdf", "rb"),
+    file=open(r"AgenticAI\1_Openai\animals.pdf", "rb"),
     purpose="user_data"
 )
 
