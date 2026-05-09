@@ -42,7 +42,8 @@ def chat_with_buffett(message, history):
 with gr.Blocks() as demo: # start defining the UI
     gr.Markdown("#Ask about Warren Buffett") # means big header
     
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(type="messages")
+
     msg = gr.Textbox(placeholder="Ask a question about Buffett...")
     clear = gr.Button("Clear")
     
