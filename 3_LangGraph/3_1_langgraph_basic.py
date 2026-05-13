@@ -38,6 +38,6 @@ if __name__ == "__main__":
  # --- Draw and save the graph image ---
     print("Generating graph image...")
     graph = app.get_graph()
-    graph_path = "AgenticAI\\3_LangGraph\\greeting_graph.png"
+    graph_path = "greeting_graph.png"
     graph.draw_mermaid_png(output_file_path=graph_path)
     print(f"Graph image saved at: {graph_path}")
