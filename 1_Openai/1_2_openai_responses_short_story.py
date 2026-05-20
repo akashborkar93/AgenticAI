@@ -11,7 +11,7 @@ client = OpenAI(
 
 response = client.responses.create(
     model="gpt-4o-mini",
-    input="Write a one-sentence bedtime story about a unicorn."
+    input="Write two lines poem on pallavi."
 )
 
 print(response.output_text)
