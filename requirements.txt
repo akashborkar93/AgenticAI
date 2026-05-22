@@ -7,3 +7,5 @@ langchain-ollama
 langchain-groq
 langchain_openai
 langgraph.checkpoint.sqlite
+langchain-huggingface
+chromadb
