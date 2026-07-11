@@ -8,4 +8,5 @@ langchain-groq
 langchain_openai
 langgraph.checkpoint.sqlite
 langchain-huggingface
-chromadb
+langchain-text-splitters
+langchain-chroma
